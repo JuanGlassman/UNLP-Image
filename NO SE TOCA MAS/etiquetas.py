@@ -25,9 +25,12 @@ def eti():
     descripcion = ''
 
     columna_izquierda = [
-        [sg.Text("Directorio de imágenes"),sg.In(size=(25, 1), enable_events=True, key="-CARPETA-"),sg.FolderBrowse('Buscar')],
-        [sg.Text("Etiquetar imagen"),sg.In(size=(25, 1), enable_events=True, key="-ETIQUETAR TEXT-"),sg.Button('Etiquetar', key="-ETIQUETAR-")],
-        [sg.Text("Agregar descripcion"),sg.In(size=(25, 1), enable_events=True, key="-DESCRIBIR TEXT-"),sg.Button('Modificar', key="-DESCRIBIR-")],
+        [sg.Text("Directorio de imágenes"),sg.In(size=(25, 1), enable_events=True, key="-CARPETA-"),
+         sg.FolderBrowse('Buscar')],
+        [sg.Text("Etiquetar imagen"),sg.In(size=(25, 1), enable_events=True, key="-ETIQUETAR TEXT-"),
+         sg.Button('Etiquetar', key="-ETIQUETAR-")],
+        [sg.Text("Agregar descripcion"),sg.In(size=(25, 1), enable_events=True, key="-DESCRIBIR TEXT-"),
+         sg.Button('Modificar', key="-DESCRIBIR-")],
         [sg.Listbox(values=[], enable_events=True, size=(40, 20),key="-ARCHIVOS-")]
     ]
 
@@ -37,7 +40,7 @@ def eti():
     columna_derecha = [
         [sg.Text(size=(100,1), key="-DESCRIPCION-")],
         [sg.Image(data=abrir_foto(ruta_foto),key="-IMAGEN-")],
-        [sg.Text(size=(100,1), key="-ETIQUETAS-")],
+        [sg.Text(size=(200,2), key="-ETIQUETAS-")],
         [sg.Text('')]
     ]
 
@@ -57,7 +60,7 @@ def eti():
 
     while True:
         event, values = window.read()
-        if event == "Exit" or event == sg.WIN_CLOSED:
+        if event == "volver" or event == sg.WIN_CLOSED:
             break
         if event == "-CARPETA-":
             ruta_carpeta = values["-CARPETA-"]
@@ -86,6 +89,6 @@ def eti():
             window["-DESCRIPCION-"].update(descripcion)
         if event=='-ETIQUETAR-':
             etiquetas.append(values['-ETIQUETAR TEXT-'])
-            window["-ETIQUETAS-"].update(str(map(lambda tag: tag , etiquetas)))
+            window["-ETIQUETAS-"].update(" #".join(map(str, etiquetas)))
 
     window.close()
