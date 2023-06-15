@@ -1,0 +1,37 @@
+[
+  {
+    "Nombre": "Juan Garcia",
+    "Edad": 40,
+    "Alias": "Juancito1418",
+    "Genero": "Masculino",
+    "Foto": "F:/Modificaciones_Juani/Fotos/foto1.png"
+  },
+  {
+    "Nombre": "Mariana Perez",
+    "Edad": 27,
+    "Alias": "Mari147",
+    "Genero": "Femenino",
+    "Foto": "F:/Modificaciones_Juani/Fotos/foto2.png"
+  },
+  {
+    "Nombre": "Gaston Lupin",
+    "Edad": 21,
+    "Alias": "Gasti_L",
+    "Genero": "Bisexual",
+    "Foto": "F:/Modificaciones_Juani/Fotos/foto3.png"
+  },
+  {
+    "Nombre": "Cacho",
+    "Edad": 45,
+    "Alias": "RacingClub19",
+    "Genero": "Masculino",
+    "Foto": "F:/Modificaciones_Juani/Fotos/foto5.png"
+  },
+  {
+    "Nombre": "Juliana Fernandez",
+    "Edad": 21,
+    "Alias": "Juli3456",
+    "Genero": "Femenino",
+    "Foto": "F:/Modificaciones_Juani/Fotos/foto4.png"
+  }
+]
